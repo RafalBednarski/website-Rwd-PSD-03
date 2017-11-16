@@ -1,1 +1,95 @@
-﻿
+body {
+  margin: 0;
+  font-family: 'Barlow Condensed', sans-serif; }
+
+.jumbotron {
+  height: 110vh;
+  width: 100%;
+  background: url("../img/build/jumbotron.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  color: #fff; }
+  .jumbotron .border {
+    border-bottom: 1px solid #fff; }
+    .jumbotron .border ul li {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-right: 3.75rem; }
+    .jumbotron .border img {
+      z-index: 1;
+      height: 1.5rem;
+      width: 12rem;
+      padding-bottom: 0; }
+  .jumbotron .slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center; }
+    .jumbotron .slogan h1 {
+      text-align: center;
+      padding-top: 10rem;
+      font-size: 4rem; }
+    .jumbotron .slogan p {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 5rem; }
+    .jumbotron .slogan button {
+      height: 2.875rem;
+      width: 12.5rem;
+      background: #e84545;
+      border: none;
+      border-radius: 5px;
+      color: #fff; }
+
+.strengths {
+  padding-top: 5rem; }
+  .strengths .strength {
+    text-align: center; }
+    .strengths .strength h5 {
+      text-transform: uppercase; }
+    .strengths .strength p {
+      font-size: 14px;
+      margin-left: 1rem;
+      margin-right: 1rem; }
+
+.gallery .pic-1 {
+  background: url("../img/build/g1.png");
+  height: 20rem; }
+
+.gallery .pic-2 {
+  background: url("../img/build/g2.png");
+  height: 20rem; }
+
+.gallery .pic-3 {
+  background: url("../img/build/g3.png");
+  height: 20rem; }
+
+.gallery .pic-4 {
+  background: url("../img/build/g4.png");
+  height: 20rem; }
+
+.gallery .pic-5 {
+  background: url("../img/build/g5.png");
+  height: 20rem; }
+
+.gallery .pic-6 {
+  background: url("../img/build/g6.png");
+  height: 20rem; }
+
+.gallery .pic-7 {
+  background: url("../img/build/g7.png");
+  height: 20rem; }
+
+.gallery .pic-8 {
+  background: url("../img/build/g4.png");
+  height: 20rem; }
+
+/*# sourceMappingURL=style.css.map */

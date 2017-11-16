@@ -1,15 +1,9 @@
-body {
-	background: #2D2D2D;
-	color: #fff;
-}
-
 * {
 	box-sizing: border-box;
 	}
 	
 .container {
-	width: 100%;
-	max-width: 1200px;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
@@ -19,11 +13,10 @@ body {
 	clear: both;
  }
  
- [class*="col-"] { /*selektor dla wszystkich elementów z klasą col-*/
+ [class*="col-"] {
  	 float: left;
  	 min-height: 1px;
  	 padding: 16px;
- 	 border: 2px solid #86999B;
  }
  
  

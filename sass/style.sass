@@ -1,0 +1,97 @@
+$main: #fff
+
+@mixin shape($height, $width, $background)
+	height: $height
+	width: $width
+	background: $background
+
+@mixin responsive-image($background-repeat, $-webkit-background-size, $-moz-background-size, $-o-background-size, $background-size, $background-position)	
+	background-repeat: $background-repeat
+	-webkit-background-size: $-webkit-background-size
+	-moz-background-size: $-moz-background-size
+	-o-background-size: $-o-background-size
+	background-size: $background-size
+	background-position: $background-position
+
+@mixin flex($display, $flex-direction, $justify-content, $flex-wrap, $align-items)
+	display: $display
+	flex-direction: $flex-direction
+	justify-content: $justify-content
+	flex-wrap: $flex-wrap
+	align-items: $align-items	
+
+body
+	margin: 0
+	font-family: 'Barlow Condensed', sans-serif
+
+.jumbotron
+	@include shape(110vh, 100%, url('../img/build/jumbotron.png'))
+	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
+	z-index: -1
+	color: $main
+	.border
+		border-bottom: 1px solid #fff
+		ul
+			li
+				display: inline-block
+				font-size: 1rem
+				font-weight: 700
+				text-transform: uppercase
+				margin-right: 3.75rem
+		img
+			z-index: 1
+			height: 1.5rem
+			width: 12rem
+			padding-bottom: 0
+	.slogan
+		@include flex(flex, column, center, wrap, center)
+		h1
+			text-align: center
+			padding-top: 10rem
+			font-size: 4rem
+		p
+			text-align: center
+			font-size: 1.5rem
+			margin-bottom: 5rem
+		button
+			@include shape(2.875rem, 12.5rem, #e84545)
+			border: none
+			border-radius: 5px
+			color: $main
+							
+.strengths
+	padding-top: 5rem
+	.strength
+		text-align: center
+		h5
+			text-transform: uppercase
+		p
+			font-size: 14px
+			margin-left: 1rem
+			margin-right: 1rem
+.gallery
+	.pic-1
+		background: url('../img/build/g1.png')
+		height: 20rem
+	.pic-2
+		background: url('../img/build/g2.png')
+		height: 20rem
+	.pic-3
+		background: url('../img/build/g3.png')
+		height: 20rem
+	.pic-4
+		background: url('../img/build/g4.png')
+		height: 20rem
+	.pic-5
+		background: url('../img/build/g5.png')
+		height: 20rem
+	.pic-6
+		background: url('../img/build/g6.png')
+		height: 20rem
+	.pic-7
+		background: url('../img/build/g7.png')
+		height: 20rem
+	.pic-8
+		background: url('../img/build/g4.png')
+		height: 20rem
+										
