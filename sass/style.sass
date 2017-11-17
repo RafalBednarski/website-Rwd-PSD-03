@@ -1,9 +1,10 @@
 $main: #fff
 
-@mixin shape($height, $width, $background)
+@mixin shape($height, $width, $background, $border)
 	height: $height
 	width: $width
 	background: $background
+	border: $border
 
 @mixin responsive-image($background-repeat, $-webkit-background-size, $-moz-background-size, $-o-background-size, $background-size, $background-position)	
 	background-repeat: $background-repeat
@@ -25,7 +26,7 @@ body
 	font-family: 'Barlow Condensed', sans-serif
 
 .jumbotron
-	@include shape(110vh, 100%, url('../img/build/jumbotron.png'))
+	@include shape(110vh, 100%, url('../img/build/jumbotron.png'), none)
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	z-index: -1
 	color: $main
@@ -54,8 +55,7 @@ body
 			font-size: 1.5rem
 			margin-bottom: 5rem
 		button
-			@include shape(2.875rem, 12.5rem, #e84545)
-			border: none
+			@include shape(2.875rem, 12.5rem, #e84545, none)
 			border-radius: 5px
 			color: $main
 							
@@ -71,27 +71,45 @@ body
 			margin-right: 1rem
 .gallery
 	.pic-1
-		background: url('../img/build/g1.png')
-		height: 20rem
+		@include shape(20rem, 25%, url('../img/build/g1.png'), 0.5px solid #fff)
+		box-sizing: border-box
 	.pic-2
-		background: url('../img/build/g2.png')
-		height: 20rem
+		@include shape(20rem, 25%, url('../img/build/g2.png'), 0.5px solid #fff)
+		box-sizing: border-box
 	.pic-3
-		background: url('../img/build/g3.png')
-		height: 20rem
+		@include shape(20rem, 25%, url('../img/build/g3.png'), 0.5px solid #fff)
+		box-sizing: border-box
 	.pic-4
-		background: url('../img/build/g4.png')
-		height: 20rem
+		@include shape(20rem, 25%, url('../img/build/g4.png'), 0.5px solid #fff)
+		box-sizing: border-box
 	.pic-5
-		background: url('../img/build/g5.png')
-		height: 20rem
+		@include shape(20rem, 25%, url('../img/build/g5.png'), 0.5px solid #fff)
+		box-sizing: border-box
 	.pic-6
-		background: url('../img/build/g6.png')
-		height: 20rem
+		@include shape(20rem, 25%, url('../img/build/g6.png'), 0.5px solid #fff)
+		box-sizing: border-box
 	.pic-7
-		background: url('../img/build/g7.png')
-		height: 20rem
+		@include shape(20rem, 25%, url('../img/build/g7.png'), 0.5px solid #fff)
+		box-sizing: border-box
 	.pic-8
-		background: url('../img/build/g4.png')
-		height: 20rem
-										
+		@include shape(20rem, 25%, url('../img/build/g2.png'), 0.5px solid #fff)
+		box-sizing: border-box
+
+.team 
+	padding-top: 5rem
+	img
+		@include shape(16rem, 16rem, none, 1rem solid #fff)
+		box-sizing: border-box
+	h5
+	    color: #e84545
+	    text-transform: uppercase	
+	.box
+	    @include shape(2.5rem, 2.5rem, none, 1px solid #e8ecee)
+	    display: inline-block
+	    img
+	    	@include shape(1rem, 1rem, #c6cacc, none)
+
+.caffe
+	padding-top: 5rem
+	.caffe-background
+		@include shape(31rem, 50%, url('../img/build/caffe.png'), none)   	
