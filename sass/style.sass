@@ -1,5 +1,8 @@
 $main: #fff
 
+@mixin respond-to($media)
+    @media only screen and #{$media}
+
 @mixin shape($height, $width, $background, $border)
 	height: $height
 	width: $width
@@ -32,18 +35,47 @@ body
 	color: $main
 	.border
 		border-bottom: 1px solid #fff
-		ul
-			li
-				display: inline-block
-				font-size: 1rem
-				font-weight: 700
-				text-transform: uppercase
-				margin-right: 3.75rem
-		img
-			z-index: 1
-			height: 1.5rem
-			width: 12rem
-			padding-bottom: 0
+	ul
+		li
+			display: inline-block
+			font-size: 1rem
+			font-weight: 700
+			text-transform: uppercase
+			margin-right: 3.75rem
+	.hamburger-container
+		@include flex(flex, row, flex-end, wrap, center)		
+	.hamburger
+		width: 40px
+		height: 35px
+		border: 0
+		border-top: 5px solid #ffffff
+		background: transparent
+		position: relative
+		transition: 0.3s transform linear
+		&:before, &:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			border-top: 5px solid #ffffff
+			transform: translateY(10px)
+		&:after 
+			transform: translateY(25px)
+			transition: 0.3s transform linear
+		&:focus 
+			transform: rotate(45deg) translateY(5px)
+			border: none
+		&:focus
+			transform: rotate(-90deg) translateX(-10px)
+		&:after
+  			transform: rotate(180deg) translateX(0px) translateY(-25px)
+
+	img
+		z-index: 1
+		height: 1.5rem
+		width: 12rem
+		padding-bottom: 0
 	.slogan
 		@include flex(flex, column, center, wrap, center)
 		h1
@@ -112,4 +144,50 @@ body
 .caffe
 	padding-top: 5rem
 	.caffe-background
-		@include shape(31rem, 50%, url('../img/build/caffe.png'), none)   	
+		@include shape(31rem, 50%, url('../img/build/caffe.png'), none)  
+
+
+////////@media////////@media////////@media////////@media////////@media
+@media screen and (min-width: 1580px)
+	.hamburger
+		display: none
+
+@media screen and (max-width: 1580px)
+	.jumbotron
+		ul
+			li
+				margin-right: 3rem
+	.hamburger
+		display: none							 	
+
+@media screen and (max-width: 1450px)	
+	.jumbotron
+		ul
+			li
+				margin-right: 2rem
+	.hamburger
+		display: none								
+
+@media screen and (max-width: 1270px)	
+	.jumbotron
+		ul
+			li
+				margin-right: 1rem
+	.hamburger
+		display: none				
+
+@media screen and (max-width: 1080px)	
+	.jumbotron
+		ul
+			li
+				margin-right: 0.1rem
+	.hamburger
+		display: none												
+
+@media screen and (max-width: 920px)	
+	.jumbotron
+		ul
+			li
+				display: none
+	.hamburger
+		display: block							

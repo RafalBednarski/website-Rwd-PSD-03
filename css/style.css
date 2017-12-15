@@ -17,17 +17,49 @@ body {
   color: #fff; }
   .jumbotron .border {
     border-bottom: 1px solid #fff; }
-    .jumbotron .border ul li {
-      display: inline-block;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-right: 3.75rem; }
-    .jumbotron .border img {
-      z-index: 1;
-      height: 1.5rem;
-      width: 12rem;
-      padding-bottom: 0; }
+  .jumbotron ul li {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 3.75rem; }
+  .jumbotron .hamburger-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center; }
+  .jumbotron .hamburger {
+    width: 40px;
+    height: 35px;
+    border: 0;
+    border-top: 5px solid #ffffff;
+    background: transparent;
+    position: relative;
+    transition: 0.3s transform linear; }
+    .jumbotron .hamburger:before, .jumbotron .hamburger:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top: 5px solid #ffffff;
+      transform: translateY(10px); }
+    .jumbotron .hamburger:after {
+      transform: translateY(25px);
+      transition: 0.3s transform linear; }
+    .jumbotron .hamburger:focus {
+      transform: rotate(45deg) translateY(5px);
+      border: none; }
+    .jumbotron .hamburger:focus {
+      transform: rotate(-90deg) translateX(-10px); }
+    .jumbotron .hamburger:after {
+      transform: rotate(180deg) translateX(0px) translateY(-25px); }
+  .jumbotron img {
+    z-index: 1;
+    height: 1.5rem;
+    width: 12rem;
+    padding-bottom: 0; }
   .jumbotron .slogan {
     display: flex;
     flex-direction: column;
@@ -147,5 +179,39 @@ body {
     width: 50%;
     background: url("../img/build/caffe.png");
     border: none; }
+
+@media screen and (min-width: 1580px) {
+  .hamburger {
+    display: none; } }
+
+@media screen and (max-width: 1580px) {
+  .jumbotron ul li {
+    margin-right: 3rem; }
+  .hamburger {
+    display: none; } }
+
+@media screen and (max-width: 1450px) {
+  .jumbotron ul li {
+    margin-right: 2rem; }
+  .hamburger {
+    display: none; } }
+
+@media screen and (max-width: 1270px) {
+  .jumbotron ul li {
+    margin-right: 1rem; }
+  .hamburger {
+    display: none; } }
+
+@media screen and (max-width: 1080px) {
+  .jumbotron ul li {
+    margin-right: 0.1rem; }
+  .hamburger {
+    display: none; } }
+
+@media screen and (max-width: 920px) {
+  .jumbotron ul li {
+    display: none; }
+  .hamburger {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */
