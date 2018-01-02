@@ -144,8 +144,30 @@ body
 .caffe
 	padding-top: 5rem
 	.caffe-background
-		@include shape(31rem, 50%, url('../img/build/caffe.png'), none)  
+		@include shape(31rem, 50%, url('../img/build/caffe.png'), none)
 
+.download
+	height: 60rem
+	text-align: center
+	button
+		@include shape(2.875rem, 17.5rem, #e84545, none)
+		border-radius: 5px
+		color: $main
+		margin-top: 2.5rem
+	h1
+		font-weight: 200
+		margin-top: 6.25rem
+		margin-bottom: 6.25rem
+	p
+		font-weight: bold
+.footer						  
+	@include shape(15.625rem, 100%, #3a3e64, none)
+	color: $main
+	.box
+		@include shape(2.5rem, 2.5rem, none, 1px solid #e8ecee)
+		display: inline-block
+		img
+			text-align: center
 
 ////////@media////////@media////////@media////////@media////////@media
 @media screen and (min-width: 1580px)

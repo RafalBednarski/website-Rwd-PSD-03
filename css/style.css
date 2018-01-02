@@ -180,6 +180,39 @@ body {
     background: url("../img/build/caffe.png");
     border: none; }
 
+.download {
+  height: 60rem;
+  text-align: center; }
+  .download button {
+    height: 2.875rem;
+    width: 17.5rem;
+    background: #e84545;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 2.5rem; }
+  .download h1 {
+    font-weight: 200;
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem; }
+  .download p {
+    font-weight: bold; }
+
+.footer {
+  height: 15.625rem;
+  width: 100%;
+  background: #3a3e64;
+  border: none;
+  color: #fff; }
+  .footer .box {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: none;
+    border: 1px solid #e8ecee;
+    display: inline-block; }
+    .footer .box img {
+      text-align: center; }
+
 @media screen and (min-width: 1580px) {
   .hamburger {
     display: none; } }
