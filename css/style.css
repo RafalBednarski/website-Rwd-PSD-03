@@ -203,15 +203,45 @@ body {
   width: 100%;
   background: #3a3e64;
   border: none;
-  color: #fff; }
+  color: #fff;
+  text-align: center; }
   .footer .box {
     height: 2.5rem;
     width: 2.5rem;
     background: none;
-    border: 1px solid #e8ecee;
-    display: inline-block; }
+    border: 2px solid #e8ecee;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 10%; }
     .footer .box img {
-      text-align: center; }
+      margin: 10px; }
+  .footer .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center; }
+    .footer .social .boxes {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center; }
+
+.footer-2 {
+  height: 6rem;
+  width: 100%;
+  background: #313454;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center; }
+  .footer-2 p {
+    margin: 0;
+    text-align: center;
+    color: #fff; }
 
 @media screen and (min-width: 1580px) {
   .hamburger {

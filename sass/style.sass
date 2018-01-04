@@ -163,11 +163,27 @@ body
 .footer						  
 	@include shape(15.625rem, 100%, #3a3e64, none)
 	color: $main
+	text-align: center
 	.box
-		@include shape(2.5rem, 2.5rem, none, 1px solid #e8ecee)
+		@include shape(2.5rem, 2.5rem, none, 2px solid #e8ecee)
 		display: inline-block
+		margin: 4px
+		border-radius: 10%
 		img
-			text-align: center
+			margin: 10px
+	.social
+		@include flex(flex, column, center, wrap, center)
+		.boxes
+			@include flex(flex, row, center, wrap, center)
+
+.footer-2
+	@include shape(6rem, 100%, #313454, none)
+	@include flex(flex, row, center, wrap, center)
+	p
+		margin: 0
+		text-align: center
+		color: $main
+
 
 ////////@media////////@media////////@media////////@media////////@media
 @media screen and (min-width: 1580px)
