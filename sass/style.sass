@@ -29,7 +29,7 @@ body
 	font-family: 'Barlow Condensed', sans-serif
 
 .jumbotron
-	@include shape(110vh, 100%, url('../img/build/jumbotron.png'), none)
+	@include shape(min 110vh, 100%, url('../img/build/jumbotron.png'), none)
 	@include responsive-image(no-repeat, cover, cover, cover, cover, center)
 	z-index: -1
 	color: $main
@@ -145,6 +145,17 @@ body
 	padding-top: 5rem
 	.caffe-background
 		@include shape(31rem, 50%, url('../img/build/caffe.png'), none)
+	.carousel
+		padding: 0	
+		.slide
+			color: $main
+			@include shape(31rem, 50%, #53354a, none)
+			h2
+				font-size: 2.25rem
+				font-family: 'Calligraffitti', cursive
+				margin: 4rem
+			p
+				margin: 4rem
 
 .download
 	height: 60rem
@@ -228,4 +239,14 @@ body
 			li
 				display: none
 	.hamburger
-		display: block							
+		display: block
+
+	.strength
+		width: 50%								
+
+@media screen and (max-width: 500px)
+	.strength
+		p
+			display: none
+		h5
+			display: none			

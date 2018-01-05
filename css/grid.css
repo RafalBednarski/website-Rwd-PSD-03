@@ -111,3 +111,18 @@
   .col-offset-11 {
  	margin-left: 91.66%;	
  }
+
+@media (max-width: 760px) {
+    .col-4 {
+    width: 50%;
+ }
+    .col-3 {
+      width: 40%
+    }
+}
+
+@media (max-width: 400px) {
+  .strength h5, p {
+    display: none;
+  }
+}

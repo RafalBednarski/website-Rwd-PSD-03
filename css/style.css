@@ -3,7 +3,7 @@ body {
   font-family: 'Barlow Condensed', sans-serif; }
 
 .jumbotron {
-  height: 110vh;
+  height: min 110vh;
   width: 100%;
   background: url("../img/build/jumbotron.png");
   border: none;
@@ -179,6 +179,20 @@ body {
     width: 50%;
     background: url("../img/build/caffe.png");
     border: none; }
+  .caffe .carousel {
+    padding: 0; }
+    .caffe .carousel .slide {
+      color: #fff;
+      height: 31rem;
+      width: 50%;
+      background: #53354a;
+      border: none; }
+      .caffe .carousel .slide h2 {
+        font-size: 2.25rem;
+        font-family: 'Calligraffitti', cursive;
+        margin: 4rem; }
+      .caffe .carousel .slide p {
+        margin: 4rem; }
 
 .download {
   height: 60rem;
@@ -275,6 +289,14 @@ body {
   .jumbotron ul li {
     display: none; }
   .hamburger {
-    display: block; } }
+    display: block; }
+  .strength {
+    width: 50%; } }
+
+@media screen and (max-width: 500px) {
+  .strength p {
+    display: none; }
+  .strength h5 {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
